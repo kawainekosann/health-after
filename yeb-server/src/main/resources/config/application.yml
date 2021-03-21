@@ -1,0 +1,40 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 67iwxh1314
+    hikari:
+      #连接池
+      pool-name: DataHikariCP
+      #最小空闲连接数
+      minimum-idle: 5
+      #空闲连接最大存活时间,默认60000（10分钟）
+      idle-timeout: 180000
+      #最大连接数
+      maximum-pool-size: 10
+      #从连接池返回的连接自动提交
+      auto-commit: true
+      #连接最大存活时间0表示永久存活默认180000（30分钟）
+      max-lifetime: 180000
+      #连接超过时间(30秒)
+      connection-timeout: 30000
+      #测试连接是否可用的查询语句
+      connection-test-query: SELECT 1
+
+#mybatisPlus配置
+mybatis-plus:
+  #配置mapper映射文件
+  mapper-locations: classpath:/mapper/*.xml
+  #配置mybatis数据返回类型别名（默认别名是类名）
+  type-aliases-package: com.kawainekosann.server.pojo
+  configuration:
+    #自动驼峰命名
+    map-underscore-to-camel-case: false
+
+logging:
+  level:
+    com.kawainekosann.server.mapper: debug
