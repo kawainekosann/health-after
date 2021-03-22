@@ -9,7 +9,7 @@
         <where>
             username= #{username} and password = #{password}
             <if test="state!=null">
-                and state=1
+                and state='1'
             </if>
         </where>
     </select>
