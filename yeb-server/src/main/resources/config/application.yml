@@ -25,6 +25,11 @@ spring:
       #测试连接是否可用的查询语句
       connection-test-query: SELECT 1
 
+  #devtools:
+    #restart:
+      #热部署时排除哪些资源
+      #exclude: jdbc.properties
+
 #mybatisPlus配置
 mybatis-plus:
   #配置mapper映射文件
@@ -38,3 +43,61 @@ mybatis-plus:
 logging:
   level:
     com.kawainekosann.server.mapper: debug
+
+
+yaml:
+  level:
+    str: 字符串不需要双引号
+    num: 666
+    Dnum: 666.88
+    birth: 2000/12/2 12:20:12
+#    list: [one,two,three]
+    list:
+      - one
+      - two
+      - three
+#    set: [1,2,3]
+    set:
+      - 1
+      - 2
+      - 3
+#    map: {key1: value1,key2: value2}
+    map:
+      key1: value1
+      key2: value2
+    users:
+      - username: liu
+        password: 1
+      - username: liu2
+        password: 2
+
+yaml2:
+  level:
+    school:
+      name: ss
+    str: 字符串不需要双引号7
+    num: 777
+    Dnum: 7666.88
+    birth: 2000/12/7 12:20:12
+    #    list: [one,two,three]
+    list:
+      - one1
+      - two1
+      - three1
+    #    set: [1,2,3]
+    set:
+      - 11
+      - 21
+      - 31
+    #    map: {key1: value1,key2: value2}
+    map:
+      key1: value11
+      key2: value21
+    users:
+      - username: liu1
+        password: 11
+      - username: liu21
+        password: 21
+
+
+
