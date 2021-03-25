@@ -1,6 +1,9 @@
 package com.kawainekosann.server.pojo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConstructorBinding;
@@ -12,6 +15,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+//toString
+@ToString
+//所有参构造器
+@AllArgsConstructor
+//无参构造器
+@NoArgsConstructor
 //lombok自动getter setter
 @Data
 ///@Component
@@ -39,17 +48,5 @@ public class TestYaml {
     private Map<String, String> map;
     private List<User> users;
 
-    @Override
-    public String toString() {
-        return "TestYaml{" +
-                "str='" + str + '\'' +
-                ", num=" + num +
-                ", Dnum=" + Dnum +
-                ", birth=" + birth +
-                ", list=" + list +
-                ", set=" + set +
-                ", map=" + map +
-                ", users=" + users +
-                '}';
-    }
+
 }

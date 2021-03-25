@@ -22,12 +22,5 @@ public class TestYaml2 {
     private Set<String> set;
     private Map<String, String> map;
     private List<User> users;
-    @Valid
-    private School school;
 
-    @Data
-    class School {
-        @NotNull
-        private String name;
-    }
 }
