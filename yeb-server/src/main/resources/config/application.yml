@@ -35,6 +35,11 @@ spring:
       #热部署时排除哪些资源
       #exclude: jdbc.properties
 
+  #配置redis
+  redis:
+    host: 6379
+    url: 192.168.10.1
+
 #mybatisPlus配置
 mybatis-plus:
   #配置mapper映射文件
@@ -103,6 +108,5 @@ yaml2:
         password: 11
       - username: liu21
         password: 21
-
 
 
