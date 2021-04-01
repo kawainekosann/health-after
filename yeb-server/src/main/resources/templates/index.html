@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>首页名 index.html就行，放入静态资源路径就行</h1>
+<!--取值,不带转义-->
+<div th:text="${msg}"></div>
+<!--取值,带转义-->
+<div th:utext="${msg}"></div>
+<!--遍历-->
+<!--<h1 th:each="user:${users}" th:text="${user}"></h1>-->
+<h1 th:each="user:${users}">[[ ${user} ]]</h1>
+
+</body>
+</html>

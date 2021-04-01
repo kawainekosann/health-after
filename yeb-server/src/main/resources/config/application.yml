@@ -35,10 +35,21 @@ spring:
       #热部署时排除哪些资源
       #exclude: jdbc.properties
 
+  #此处配置了默认静态资源路径的话默认的静态资源路径 public static resources等会无效
+#  mvc:
+#    static-path-pattern:
+
+
+  mvc:
+    format:
+      date: dd/MM/yyyy
+
+
   #配置redis
-  redis:
-    host: 6379
-    url: 192.168.10.1
+#  redis:
+#    host: 6379
+#    url: 192.168.10.1
+
 
 #mybatisPlus配置
 mybatis-plus:
@@ -108,5 +119,4 @@ yaml2:
         password: 11
       - username: liu21
         password: 21
-
 
