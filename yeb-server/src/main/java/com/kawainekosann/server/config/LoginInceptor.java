@@ -1,4 +1,4 @@
-package com.kawainekosann.server.controller;
+package com.kawainekosann.server.config;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginInceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return false;
+        return true;
     }
 
     @Override

@@ -24,6 +24,7 @@ public class LoginController {
         if(result!=null){
             flag="ok";
         }
+
         res.put("flag",flag);
         res.put("user",result);
         String res_json = JSON.toJSONString(res);
