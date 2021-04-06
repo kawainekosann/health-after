@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -26,11 +27,16 @@ public class MyMVCConfig implements WebMvcConfigurer {
         }
     }
 
-
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginInceptor()).addPathPatterns("/**").excludePathPatterns("/","login");
+    }
 
     //视图跳转
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/kuang").setViewName("success");
     }
+
+
 }

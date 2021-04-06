@@ -40,16 +40,18 @@ spring:
 #    static-path-pattern:
 
 
-  mvc:
-    format:
-      date: dd/MM/yyyy
-
-
   #配置redis
 #  redis:
 #    host: 6379
 #    url: 192.168.10.1
 
+
+  #开启参数方式的内容协商，请求参数为format
+  mvc:
+    format:
+      date: dd/MM/yyyy
+    contentnegotiation:
+      favor-parameter: true
 
 #mybatisPlus配置
 mybatis-plus:

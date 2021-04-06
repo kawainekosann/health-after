@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-success
+<h1 th:text="${msg}">哈哈哈</h1>
+<h2>
+    <a href="www.atguigu.com" th:href="${link}">qunaa</a>
+    <a href="www.atguigu.com" th:href="@{/link}">nihaoa</a>
+</h2>
 </body>
 </html>
